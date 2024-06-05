@@ -1,0 +1,27 @@
+class -----> class does not occupy memory, class contains data member,methods,nested class, constructor
+Object ----> in java we can not execute any project without creating any creating any object, state--> attributes of an object,Behaviour----> methods of an object, it also helps in the response, Identity ---> unique name to the object 
+Constructors----> constructors do not have even the void, the Primary purpose --> to set the intial values of instances varaiables or properties of the object being created, Another usage---> Allocating memory and establishing the connections to the external resources.
+Types of Constructor -----> Parameterized Constructor----> custom intialization of each object, Default(no- argument or zero-argument) Constructor----> create default values like 0,null that and all, Copy constructor
+Encapsulation -----> To achieve control over the data --> means here we can set other classes to access the present class, data hiding is achieved over here	
+					----> Based on the encapsulation only we will declare the ---> variables as the private 
+																				----> To access these private variables we will be using the Setter and getter.
+Polymorphism ----> Polymorphism more than one form----> Types ----> 1. compile Time polynmorphism 2. Run Time polymorphism.
+					Advantages -----> Code cleanliness, Overload constructors,Aligned with real world, Reusability and extensibility.
+					Method overriding ----> compile time , method overloading ---> Run Time 
+					Constructor overloading ----> 
+Abstract -----> Example        public abstract class GraphicObject {
+                                          						//declare fields
+																// declare nonabstract
+																method abstarct void ();
+																draw();
+								* Abstract class may or may not contain abstract methods
+								* Abstract class should not be declared as final.
+								* Abstract can not be directly intialized using the new keyword.
+Interface -----> Blueprint of the class
+                    ----> I t shall have both the static and the abstract methods.
+						----> All the fields are public, static, and final by default.
+
+
+******************************************************************************************************MCQ-session-1 ********************************************************
+
+
