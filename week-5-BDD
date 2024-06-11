@@ -1,0 +1,11 @@
+*********************Steps to work with the framework ************************************************
+
+1. -----------> convert selenium Test to cucumber BDD style
+2. -----------> cucumber understands Gherkin language, read feature file and execute code written in the 
+                                                                          -----> step definition file with the help of cucumber options specified in the TestRunner.
+3. ----------> Steps to followed are:
+        a. add dependencied
+        b. Write Test in the feature file.
+        c. Create Test Runner.
+        d. Write Test code to step file.
+        e. Execute Test as Junit Test & Maven Command LIne.
