@@ -24,4 +24,59 @@ Interface -----> Blueprint of the class
 
 ******************************************************************************************************MCQ-session-1 ********************************************************
 
+1. staticaly typed programming language = Java
+2. Byte code in Java is what ?----------------> It is an Inetermediate code 
+3. Boolean default value is ----------> false
+4. API Stands for Application programming Interface 
+5. keywords in java -----> 						
+
+***************************************************************Session-2/Day-1******************************************************************************
+1. Algorithm ----> It is a set of well defined instructions that tell a computer how to solve a problem step by step
+
+			SUBROUTINE:
+			In algorithms and computer science, a subroutine is a named sequence of instructions that performs a specific task within a larger program or algorithm. 
+			Subroutines are also known as procedures, functions, methods (in object-oriented programming), 
+			or subprograms. 
+2. Pseudo code -------> It solves in bridging the gap between the problem and the actual code
+			* In between the program and the algorithm, Pseudocode work as a bridge. It is treated as a document so that the developer can understand the program easily.
+			* Also Pseudo code is an informal way to describe an lagorithm using keywords that resemble plain english.
+			By adhering to these conventions, pseudocode can effectively serve as a blueprint for implementing algorithms in specific programming languages like Java.
+			* Assignment operators are ----> :=, SET, LET (Example SET variable = 5)
+3. Flowchart Structure -----> https://www.geeksforgeeks.org/an-introduction-to-flowcharts/
+				* Here the DElay symbol is used to represent a delay or wait in a process
+				* OFF-page connector used is HEXAGONE.
+4. Pseudo code structure ------> 
+			Return statement ----> Terimnate the function and return a value to the caller 
+			endif ----> end of a conditional block
+			Function ----> In pseudo code function will return the value, example like "return a+b"
+			Procedure ----> In Pseudo code Procedure (PROC) ,below the procedure use cases are given:
+					Procedures in pseudocode are used to encapsulate a sequence of operations that need to be performed repeatedly or as a modular component of your algorithm.
+					Comparison with FUNCTION: Unlike functions, procedures do not necessarily return a value. They are used for their side effects (e.g., printing output, modifying variables).
+					Readability and Structure: Using PROCEDURE helps to organize pseudocode into manageable and reusable blocks of logic, enhancing readability and maintainability.
+					Conclusion:
+					In structured pseudocode conventions, PROCEDURE or PROC is used to define a sequence of steps or actions that make up a procedure. 
+						It provides a structured way to organize and reuse code within your algorithm,
+						facilitating clearer and more modular algorithmic design.
+
+
+5. Search Tree----->
+
+		A search tree, in computer science, is a data structure used to organize and store data in a hierarchical manner that 
+		supports efficient search, insertion, deletion, and other operations.
+		It is typically used to represent and manage data where the relationship between elements 
+		can be organized in a hierarchical or ordered structure.
+
+		Types of Search Trees:
+Binary Search Tree (BST): Nodes are arranged such that for each node, all nodes in the left subtree have values less than the node's value, and all nodes in the right subtree have values greater than the node's value.
+
+AVL Tree: A self-balancing binary search tree where the heights of the two child subtrees of any node differ by at most one.
+
+Red-Black Tree: Another type of self-balancing binary search tree where each node has an extra bit for representing the color (red or black) to ensure balanced properties.
+
+B-tree: A self-balancing search tree structure that maintains sorted data and allows searches, sequential access, insertions, and deletions in logarithmic time.
+
+Search trees are widely used in various applications where efficient searching and sorting operations are crucial. They are commonly used in database systems, indexing schemes, filesystems, and in implementations of data structures like sets, maps, and priority queues.
+
+6. 
+
 
