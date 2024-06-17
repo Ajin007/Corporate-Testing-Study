@@ -1,0 +1,36 @@
+***********************************Session-1*****************************
+1. ---> (how security is achived in the java give the most important one )Java uses Automatic Memory Management: 
+      Java uses garbage collection to automatically manage memory allocation and deallocation. 
+      This eliminates the risk of memory leaks and buffer overflows, which are common security 
+      exploits in languages with manual memory management.
+
+2. ----> How is java considered to be ?
+        It's considered a compiled and interpreted language due to its two-step execution process:
+        Compilation: Java source code (.java files) is compiled into an intermediate format called bytecode. 
+        This bytecode is not machine-specific, meaning it can run on any platform that has a Java Virtual Machine (JVM).
+
+        Interpretation: The JVM interprets the bytecode at runtime, translating it into instructions that the specific machine's processor can understand. 
+        Some JVMs, like the popular HotSpot VM, also employ Just-in-Time (JIT) compilation. JIT compilation translates frequently used bytecode sections into 
+        native machine code for even faster execution.
+
+3. ----> why string is not a premitive data type one ?
+      There are several reasons why String is not considered a primitive data type in Java:
+
+    Storage: Primitive data types have a fixed size in memory, predetermined by the Java language itself. This allows for efficient memory allocation and fast access. Strings, on the other hand, are variable in size depending on the length of the character sequence they store. They are essentially arrays of characters.
+
+  Functionality: Primitive data types are simple and don't have methods associated with them. They just hold the raw data value. Strings, however, are objects of the String class in Java.lang package. This class provides various methods for manipulating strings, such as concat(), substring(), indexOf(), etc. These methods offer functionalities beyond just storing characters.
+
+    Immutability:  In Java, most String objects are immutable (unchangeable) after creation. This means that any attempt to modify an existing string will result in a new String object being created. Primitive data types, on the other hand, are mutable and their values can be directly changed.
+
+    Memory Management: Primitive data types are stored on the stack, a region of memory that is faster to access but limited in size. Strings, as objects, are stored in the heap, a larger memory area managed by Java's garbage collector.
+
+    Here's an analogy: Imagine primitive data types like basic building blocks (fixed size and limited functionality) and Strings as Lego bricks (variable size and offer ways to connect and build complex structures).
+
+  By not being primitive, Strings offer more flexibility and functionality for working with text data in Java programs.
+
+******************************Session-2**************************************
+1. JDE----> Writing and compiling simple Java program using JDK.
+2. JRE ----> Runnig a Java application using JRE(To provide Java libraries for running the components)
+3. JVM ---> Understanding the JVm executes bytecode.
+4. JIT ---> Performance improvment using the JIT Compiler.
+    
