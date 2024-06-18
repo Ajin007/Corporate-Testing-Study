@@ -1,0 +1,11 @@
+***************Session-1**************************
+1. Primitive type are stored in stack while the non primitive types are stored in heap memory.
+          non primitive type starts with the capital letter as starting letter.
+          Example of non primitive are (String, Array, Class)
+          Non-primitive value shall be of null.
+2. Type Casting :
+        Implicit Typecasting -----> int i =100;
+                                    double d=i; // automatic typecasting
+        Explicit Typecasting ------> double d =100.04;
+                                      int i=(double)d; //manual typecasting
+2. 
