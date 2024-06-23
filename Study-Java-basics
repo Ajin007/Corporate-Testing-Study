@@ -73,10 +73,197 @@ AVL Tree: A self-balancing binary search tree where the heights of the two child
 
 Red-Black Tree: Another type of self-balancing binary search tree where each node has an extra bit for representing the color (red or black) to ensure balanced properties.
 
+
+
+
+
 B-tree: A self-balancing search tree structure that maintains sorted data and allows searches, sequential access, insertions, and deletions in logarithmic time.
 
 Search trees are widely used in various applications where efficient searching and sorting operations are crucial. They are commonly used in database systems, indexing schemes, filesystems, and in implementations of data structures like sets, maps, and priority queues.
 
 6. 
 
+*******************************************Exception*****************************************8888
+1. what is exception?
 
+			Exception ------> IOException,SQL Exception, classNot FoundException, RunTime Exception
+			Types -----> Checked Exception,Unchecked Exception.
+2. Cases when the finally block does not execute:
+			1. The death of the thread
+			2. Using the System.exit() method.
+			3. Due to an exception arising in the finally block.
+3. Why throw exception is being used ?
+			1. Here it is mainly used for the custom exception. 
+			2. Syntax:
+					throw new exception_class("error message");
+					throw new IOException("sorry device not found error");
+4. why throws is being used ?
+			1. It is mainly used for the devlopers
+			2. Followed by a class.
+			3. can declare multiple exceptions
+5. why to use the custom exception?
+			1. here why it is mainly used is that , as a developer you know it is divide byzero exception but your custom message will ensure what is being passed to the end user.
+			2. 
+6. what is custom checked exception?
+			1. It is a exception that are detected at a time of compilation.
+7. what is custom unchecked exception ?
+			1. These execeptions occur at the runtime and can only be detected at runtime.
+8. what is the classloader ?
+
+			1. whenever the java JVM starts working, this is the first class that loads.
+			2. Bootstarp classloader:
+				1. This is the first class loader.
+				2. It loads the rt.jar file which contains all class files of Java standard editions like java.lang,java.net,java.util,java.io,java.sql
+			3. Extension classloader:
+				1. Parent classloader of the System classlaoder.
+				2. It loads the jar files located inside $JAVA_HOME/jre/lib/ext dircetory.
+q			4. Application classloader:
+				1. Normally class loader is set to the current directory.
+				2. the claspath can be changed using the "-cp" or "-classpath" switch.
+
+9. After the JVM starts what and all it stores ?
+			1. Method Area: -----> code and everything stored here.
+			2. Stack: ----> It holds local variables and plays a part of method invoication.
+			3. Java stack stores frames
+			4. Program counter registery : -----> It stores the next instruction that is to be exrecuted.
+10. What is Java NAtive Interface:
+			1. Java Native Interface(JNI) is a framework which provides an interface to communicate with the another application written in another languages like C,C++,Assembley.
+			2. JNI actually inetractes with the OS library.
+11. Common JVM Interface ?
+			1. ClassNotFoundException.
+			2. NoClassDefFoundError.
+			3. OutOfMemoryError.
+			4. StackOverflowError.
+*****************************************************Collections(Frameworks)**********************************************
+
+1.  ArrayList (class)---------------> For resizable codes , Type Safe, Not fast as Array, can only store objects 
+					Methods available in ArrayList----> add,get,set,remove
+
+
+2. Linkde List ------------------> three fields of the linked list are :
+					1. prev:---> stores the address of the previous elements in the list.
+					2. next: --> stores the address of the next element in the list.
+3. Queue: ----> Methods are (add() and Offer(),Remove(),poll(),Element(),Peek())
+
+4. Set ----> 
+		Types :----> Hashsets, Linked Hashset, TreeSet
+		Hashset important points :--->
+				Hashset stores the elements by using a mechanism called "hashing".
+				Hashset have "unique" elements only
+				Hashset allow "null" values
+				Hashset class is not synchroinized.
+				Hashset does not maintain the insertion order.]
+
+		Hashset "Methods "-----> (add(),addAll(),iterator(),remove(),removeAll(),retainAll(),clear(),size())
+				1. Union --> to get the union of two sets x and y , we shall use x.addAll(y)
+				2. Intersection ----> to get the intersection use , x.retainAll(y)
+				3. Subset 0-0----> y.contaoinsAll(x)
+
+5. TreeSet 0------>
+             1. java Treeset Implemenst the set Interface
+	2. TreeSet treeset = new TreeSet();
+	3. Methods ---> NavigableSet,Floor,Comparator,first,last
+	4. same like Hashset but maintains the ascendoing order.
+
+6. LinkedHashset ------>
+
+		1. with respect to the hashset ,LinkedHashset maintain the Insertion order.
+
+
+7. HashMap ------> It stores the elements in the form of the Key value pairs.
+		1. Hahmap class implements the Map Interface.
+8. Where to use the sets ?
+		1. Sets:
+
+Storing unique elements: Use sets when you only need to keep track of distinct items and don't care about the order they were added. This is useful for scenarios like:
+Removing duplicates from a list of user IDs.
+Tracking unique words in a text document.
+Representing the ingredients in a recipe (where order doesn't matter).
+Checking membership: Sets are efficient for checking if an element exists in the collection. This can be helpful for tasks like:
+Validating user input against a set of allowed values.
+Detecting if a product ID exists in the inventory.
+Common Implementations of Sets:
+
+HashSet: This is the most common and fastest implementation for basic set operations. It uses a hash table for efficient lookups but doesn't maintain insertion order.
+TreeSet: Use a TreeSet when you need the elements to be ordered in a specific way (ascending or descending). This is useful for scenarios like:
+Sorting a list of unique keywords alphabetically.
+Maintaining an ordered list of high scores in a game.
+
+
+
+Maps:
+
+Associative data storage: Maps are fundamental for storing key-value pairs. Use them when you need to associate data with unique identifiers. This is applicable in various situations:
+Storing user information with their usernames as keys.
+Mapping product IDs to their corresponding product details.
+Representing a shopping cart with items as keys and quantities as values.
+Fast retrieval by key: Maps excel at retrieving values based on their associated keys. This is crucial for tasks like:
+Looking up a customer's address by their phone number.
+Getting the definition of a word by its key in a dictionary application.
+Common Implementations of Maps:
+
+HashMap: This is the most widely used map implementation. It offers fast access based on hash tables but doesn't maintain insertion order for key-value pairs.
+LinkedHashMap: Use a LinkedHashMap if you want to preserve the order in which elements were added to the map. This can be beneficial for scenarios like:
+Maintaining a chronological history of user actions.
+Representing a cache where the most recently accessed items are prioritized for retrieval.
+By understanding the strengths of Sets and Maps, you can effectively manage collections of data in your Java applications.
+
+
+
+9. list vs set vs map which is best and why with practical application concept?
+There's no single "best" choice between Lists, Sets, Maps, and Trees in Java. Each serves a distinct purpose, and the optimal choice depends on the specific data structure and operations you need to perform. Here's a breakdown:
+
+List:
+
+Use for: Ordered collections where you want to maintain the sequence elements were added.
+Best for:
+Shopping carts (items need to be displayed in the order added).
+To-do lists (maintain the order of tasks).
+Logs or historical data where order matters.
+Practical Example: A music playlist where song order is crucial for playback.
+Set:
+
+Use for: Collections where you only need unique elements and order doesn't matter.
+Best for:
+Removing duplicates from a data set.
+Tracking unique website visitors in a session.
+Representing ingredients in a recipe (order doesn't affect the recipe).
+Practical Example: Keeping track of unique words used in a document for frequency analysis.
+
+Map:
+
+Use for: Associating data with unique identifiers (key-value pairs).
+Best for:
+User accounts (username is key, profile information is value).
+Shopping carts (item ID is key, quantity is value).
+Phonebooks (phone number is key, name is value).
+Practical Example: Storing student information with their ID numbers as keys and their names and grades as values.
+
+Tree:
+
+Use for: Ordered collections where efficient retrieval and insertion based on a sorting criteria is important.
+Best for:
+Phone directory (search by name efficiently).
+Word list with definitions (find definitions quickly).
+Representing hierarchical data (file system structure).
+Practical Example: Maintaining a sorted leaderboard in a game, where players are ranked based on score.
+
+Choosing Between Them:
+
+Duplicates: If you need to ensure unique elements, use a Set. Lists and Maps allow duplicates.
+Order: If order matters, use a List. Sets and Maps generally don't maintain insertion order (unless you use specific implementations).
+Key-Value Relationships: If you need to associate data with unique identifiers, use a Map.
+Sorting and Searching: If efficient retrieval and insertion based on a sorting criteria is crucial, consider a Tree.
+Additional Considerations:
+
+Performance: Sets and Maps offer faster lookups by element (or key) compared to Lists (especially for large datasets). Trees excel at sorted lookups and insertions.
+Functionality: Lists offer various methods for sorting, searching by index, etc. Sets have limited functionality compared to Lists and Maps. Trees provide specific methods for navigating the hierarchical structure.
+Remember:
+
+Lists prioritize order.
+Sets prioritize uniqueness.
+Maps prioritize key-value association.
+Trees prioritize efficient sorted access.
+By understanding these concepts and practical examples, you can make informed decisions about which data structure best suits your Java application's needs.
+
+	
