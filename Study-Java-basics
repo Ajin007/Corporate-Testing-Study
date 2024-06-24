@@ -266,4 +266,62 @@ Maps prioritize key-value association.
 Trees prioritize efficient sorted access.
 By understanding these concepts and practical examples, you can make informed decisions about which data structure best suits your Java application's needs.
 
+********************************************************MultiThreading ***********************************************************
+1. It is created by two ways :
+		i. By extending the thread class.
+		ii. By implementing the Runnable interface.
+*******************************************************Synchronization in java *************************************************
+1. Synchronization in java is the capability to cotrol the access OF MUltiple threads to any shared resources.
+2. Java Synchronization is a bettre option where we want to allow only one thread to access the shared resources.
+3. Synchronization is mainly used to :
+		1. To prevent thread interface.
+		2. To prevent conssitency problems.
+4. Methods ---> wait , notify(),notifyAll()
+
+**********************************************************JDBC******************************************************
+
+1. Java.sql -----> This is the package that have the JDK, 
+2. Java.sql.Driver -----> Third party vendors implements the Java.sql.Driver interface in their database driver.
+3. Types of Driver in JDBC ----> Database that is hieraccly arranged have the package java.sql and javax.sql....
+4. Java.sql package :
+		Driver Manager------> It have getConnection() method (eg: getConnection(URL,username,password))
+				----> Driver manager is done by class.forName("com.mysql.cj.jdbc.Driver")
+		Connection----> Connetion interface represents connection to a database:
+				---> Connection connectoion=DriverManager.getConnection
+		Statement-----> Statement used to execute static SQL statements and erturn the results.-----> connection.createConnection();
+					----> Resultset resultset= statement.exceuteQuery(SqlQuery);
+		Prepared Statement-----> Prepared statement extends the Statement interfACE,so it has more features than the Statement interface
+				----> It supports the IN parameter
+				---->
+						String select_query= "Select * from states where state_is=1"
+						PreaparedStatement prp=
+		Callable Statement
+		ResultSet -----> The objective of the ResultSet is to maintain a cursor pointing to before the first row.
+5. Javax.sql package...
+		DataSource 
+		Pooled Connection
+		Rowset
+		RowSetEvent and RowSetListener
+
+6. what is Connection pool::
+		connection pooling means that conections are reused rather than created each time a connection is requested.
+		To achieve this the connection pooling is used in the background and does not affect how an application is coded,however, the application must use 
+		a DataSource object to obtain a connection instead of using the Driver Mnager class
+		The DataSource object doea not provide connection pooling or if there are no available connections in the pool, the lookup creates a new connection.
+		Ex:
+			Connection con=new Connection("scoot","trigger");
+7. Important thing to remember in JDBC connection :
+		1. use try,catch , finally
+		2. connection pooling:
+		3. error handling
+		4. use prepared statement instead of concatination to prevent SQL injection attacks.
+		5.Minimize Database Calls: Minimize the number of database calls by efficiently fetching and manipulating data within your application logic.
+			Batch Operations: When possible, use batch operations (like executeBatch) to perform multiple database updates or inserts efficiently.
+
+8. Embedded SQl:
+		1. String sql="INSERT INTO USers(username,password,fullname,email) VALUES(?,?,?,?)"
+		2. PreparedStatement statement= conn.PreparedStatement(sql);
+		3. statemnt.setString(1,"bill");
+9. DAO belongs to the JDBC layer here:
+		
 	
