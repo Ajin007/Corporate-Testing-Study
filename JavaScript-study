@@ -38,7 +38,7 @@
 Using literals:
 javascript
 Copy code
-const regex = /pattern/;
+const regex = /pattern/;(/ & / should be used before the word that you are going to use)
 Using the RegExp constructor:
 javascript
 Copy code
