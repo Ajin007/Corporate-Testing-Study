@@ -1,0 +1,34 @@
+// [abc]  ---> a,b or c
+// [^abc]  ----> anycharacter except a,b,c
+// [a-z]  ----> a to z
+// [A-Z]  -----> A to Z
+//  [a-z A-Z] ---> a to z, A to z
+// [0-9]  ---> 0 to 9
+// 
+//[ ]? -----> occurs 0 or 1 times
+//[]+ ------> occurs 1 or more times
+//[]* -----> OCCURS 0 or more times
+//[]{n} ----> ocurs n time
+// []{n, } -----> ocurs n time or more
+// []{y,z} -----> occurs atleast y times, but less than z time
+
+//  \s ----> Whitespace (space,tab,newline)
+
+// | --------> either or
+***************************************************
+//    [Regex]       [Metacharacter]
+        \d            [0-9]
+        \D            [^ 0-9]
+        \w            [a-zA-Z_0-9]
+        \W (captial w)  [^\w]
+        
+        
+        1. Examples :(mobile number with 8 or 9 and totAL digits =10)
+            [89][0-9]{9}
+            
+        2. first character uppercase,contains lower case,only one digit allowed between
+           [A-Z][a-z]*[0-9][a-z]*
+           
+         3. Email ID ---> ajin123@gmail.com
+            [a-zA-Z0-9_\-\.]+[@][a-z]+[\.][a-z]{2,3}
+            
