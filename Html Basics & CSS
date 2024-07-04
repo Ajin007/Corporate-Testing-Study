@@ -1,0 +1,57 @@
+Html :----> drag and drop, video playback introduced, API it supports also <Header> <Footer> <section> tags are also introduced in the same.(websocket)
+New Features of Html:
+                1.   SSE----->   server send events ,only unidirectional and are being transfered from the client to the server.
+                  Usage area----> Live sports scores
+                                  Real-time notifications
+                                  Stock price updates
+                                  Live comment feeds
+              2. Canavas ----> <canvas> for drqwing the surface.
+                              INteractive graphics directly with in the browser.
+              3. <input> tag based types which have ------>
+                              email,URL,date,number,time,number,color
+              4. Attributes includes --------->
+                              required,placeholders,autofocus,pattern
+              5. <datalist>
+              6. Geolocation API
+              7. Service worker API -----> for offline cache 
+                                            Example: Spotify uses service workers to enable offline playback of music for premium users, caching songs and playlists on the user's device.
+                                             Google Docs uses service workers to sync documents in the background, allowing users to continue working offline and automatically syncing changes when connectivity is restored.
+                                              Example: Google Fonts uses service workers to cache font files, reducing load times and improving user experience across websites that use these fonts.
+                                                Example: Pinterest uses service workers to cache images and other resources, optimizing the loading experience and making the app faster and more responsive.
+
+            8. Web storage ------------>
+                                  Web storage provides a way to store data in the browser. It includes two main types: Local Storage and Session Storage. Both are part of the Web Storage API and are supported by most modern browsers.
+
+                                  Key Differences
+                              Local Storage: Data is stored with no expiration time. Data persists even after the browser is closed and reopened.
+                                Session Storage: Data is stored for the duration of the page session. Data is cleared when the page session ends (e.g., when the browser tab is closed).
+
+
+******************************************************************************************************************************************************************
+Best things to remember in creating the CSS:
+
+1. Specificity:
+        Rules: Inline styles > IDs > Classes > Elements. More specific selectors will override less specific ones.
+Example: An ID selector (#id) is more specific than a class selector (.class).
+
+2. Use Pseudo-Classes and Pseudo-Elements Wisely
+Definition: Pseudo-classes and pseudo-elements add styles to elements based on their state or position.
+Best Practices:
+Use pseudo-classes for state-based styles (e.g., :hover, :focus).
+Use pseudo-elements for styling specific parts of an element (e.g., ::before, ::after).
+
+3. Consider Browser Compatibility
+Definition: Different browsers may interpret CSS differently.
+Best Practices:
+Use vendor prefixes for properties that require them (e.g., -webkit-, -moz-).
+Test your CSS in different browsers to ensure consistency.
+Use tools like Can I Use to check compatibility.
+
+4. Responsive Design
+Definition: Responsive design ensures your web page looks good on all devices and screen sizes.
+Best Practices:
+Use media queries to apply different styles based on screen size.
+Use relative units (e.g., %, em, rem) instead of fixed units (e.g., px) for scalable designs.
+
+
+
