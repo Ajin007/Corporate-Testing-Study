@@ -1,0 +1,176 @@
+***********************session-1 csss***************************
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="profile-card">
+        <h2>John Doe</h2>
+        <p>Web Developer at XYZ Company. Loves coding and coffee.</p>
+        <button class="button">Contact</button>
+    </div>
+</body>
+</html>
+
+.profile-card {
+    width: 300px;
+    background-color:rgb(255,255,255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.profile-card .button {
+    background-color: rgb(76, 174, 79);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.profile-card .button:hover {
+    background-color: rgb(69, 170, 63);
+}
+
+***************************** Session-2 CSS*****************************************************
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Introduction Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+      
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Introduction</a>
+            <a href="#">Syntax</a>
+            <a href="#">Properties</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Introduction to CSS</h1>
+        <p>CSS stands for Cascading Style Sheets. It is a language used to style and layout web pages. CSS allows you to apply styles to web pages, such as fonts, colors, and spacing, without changing the underlying HTML content.</p>
+        <p>Here are some of the benefits of using CSS:</p>
+        <ul>
+            <li>Improved separation of concerns: CSS separates the presentation of a web page from its content, making the code more maintainable.</li>
+            <li>Easier to maintain: Changes to the style of a web page can be made in one place (the CSS file) instead of having to modify the HTML code for each page.</li>
+            <li>More consistent design: CSS can be used to create a consistent look and feel for a website across all pages.</li>
+        </ul>
+
+        <h2>Basic CSS Syntax</h2>
+        <p>A basic CSS rule consists of a selector and a declaration block.</p>
+        <pre>
+            selector {
+                property: value;
+            }
+        </pre>
+        <p>The selector specifies the HTML element(s) that the style rule applies to. The declaration block contains one or more property-value pairs, separated by semicolons. The property specifies the style that you want to change, and the value specifies the new value for that property.</p>
+
+        <h2>Example</h2>
+        <p>Let's look at an example of how to use CSS to change the color of all the paragraph elements on a web page.</p>
+        <pre>
+            p {
+                color: red;
+            }
+        </pre>
+        <p>This code will change the color of all the `<p>` elements on the page to red.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CSS Introduction Project</p>
+    </footer>
+</body>
+</html>
+
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2 {
+    margin: 1rem 0;
+    text-align: center;
+    color: rgb(231, 76, 70);
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #f0f0f0; /* Adjust background color as needed */
+    padding: 1rem 2rem;
+  }
+  
+  header h1 {
+    font-size: 2rem; /* Adjust font size as needed */
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around; /* Adjust spacing as needed */
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem auto; /* Adjust margin as needed */
+    background-color: rgb(52, 73, 94);
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333; /* Adjust text color as needed */
+    font-weight: bold; /* Adjust font weight as needed */
+  }
+
+  nav a:hover{
+    background-color:rgb(44, 62, 80) ;
+  }
+  
+  /* Main content styles */
+  main {
+    padding: 2rem;
+  }
+  
+  p {
+    line-height: 1.5; /* Adjust line height as needed */
+  }
+  
+  pre {
+    background-color:rgb(244, 244, 244); /* Adjust background color as needed */
+    padding: 1rem;
+    border: 1px solid #ddd; /* Adjust border color as needed */
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+  }
+  
+  /* Footer styles */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color:rgb(52,73,94); /* Adjust background color as needed */
+  }
+
+
+
+**********************************session 1- css 3*********************************************
+
+
+
+
+
