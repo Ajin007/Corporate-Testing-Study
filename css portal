@@ -270,6 +270,207 @@ html :::::::
     
 </body>
 </html>
+*****************************************WEEK 2 Day 3 session 1 3rd q*******************
+css ::::::
+
+/* Base styles */
+html {
+    font-size: 16px; /* 1rem = 16px */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    color: rgb(68, 68, 68);
+    padding-bottom: 60px; /* space for the fixed footer */
+}
+
+header, footer {
+    background-color: rgb(51, 51, 51);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+header h1 {
+    color: rgb(0, 128, 0);
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(18, 18, 18);
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-list a:hover {
+    text-decoration: underline;
+}
+
+.sprite {
+    background-image: url('https://via.placeholder.com/150x50');
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-right: 8px;
+}
+
+/* Specific icons */
+.home-icon {
+    background-position: 0 0;
+}
+
+.about-icon {
+    background-position: -50px 0;
+}
+
+.contact-icon {
+    background-position: -100px 0;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+main h2{
+    color: rgb(255,0,0);
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgb(245, 245, 245);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: rgb(68, 68, 68);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 4px;
+}
+
+form input[type="submit"]{
+     background-color: rgb(51, 51, 51);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+
+/* button:hover {
+    background-color: rgb(68, 68, 68);
+} */
+
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: rgb(51, 51, 51);
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Media queries */
+@media (max-width: 600px) {
+    .nav-list {
+        flex-direction: column;
+    }
+    .nav-list li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width:1200px) {
+    .nav-list {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 900px) {
+    .nav-list {
+        justify-content: center;
+    }
+}\
+\
+
+
+
+html ::::::::::::::::
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - My Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="sprite home-icon">Home</a></li>
+                <li><a href="about.html" class="sprite about-icon">About</a></li>
+                <li><a href="contact.html" class="sprite contact-icon">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Get in Touch</h2>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message"></textarea><br>
+            <button class="btn" type="submit" ">Submit</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Website</p>
+        <p>Contact us: <a href="mailto:info@mywebsite.com">info@mywebsite.com</a> | +1 234 567 890</p>
+    </footer>
+</body>
+</html>
 
 
 
