@@ -168,8 +168,108 @@ body {
 
 
 
-**********************************session 1- css 3*********************************************
+**********************************week2 -day 3 session 1- css 1*********************************************
+css::::::
+body{
+    font-family: Arial,sans-serif;
+    align-content: center;
+    text-align: center;
+}
 
+header{
+    background-color: rgb(51,51,51);
+   
+   
+
+header h1{
+    color: rgb(255,255,255);
+}
+
+
+}
+.nav-list{
+    background-color: rgb(68, 68, 68);
+    color: rgb(255, 255,255);
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.sprite{
+    background-image: url('https://via.placeholder.com/150x50');
+
+}
+
+.home-icon {
+    background-position: 0 0;
+}
+
+.about-icon {
+    background-position: -3.125rem 0; /* -50px -> -3.125rem */
+}
+
+.contact-icon {
+    background-position: -6.25rem 0; /* -100px -> -6.25rem */
+}
+
+
+@media (max-width: 600px) {
+    .nav-list {
+        flex-direction: column;
+    }
+    .nav-list li {
+        margin: 10px 0;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    .nav-list {
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 1201px) {
+    .nav-list {
+        justify-content: center;
+    }
+}
+
+
+
+
+html :::::::
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fictional online platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>My Website</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#" class="sprite home-icon">Home</a></li>
+                <li><a href="#" class="sprite about-icon">About</a></li>
+                <li><a href="#" class="sprite contact-icon">Contact</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <main>
+        <h2>Welcome to My Website</h2>
+        <p>This is an example of a responsive website with a navigation bar, demonstrating CSS specificity and CSS sprites.</p>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Website</p>
+        <p>Contact us: <a href="mailto:info@mywebsite.com">info@mywebsite.com</a> | +1 234 567 890</p>
+    </footer>
+    
+</body>
+</html>
 
 
 
