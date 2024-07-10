@@ -54,4 +54,25 @@ Use media queries to apply different styles based on screen size.
 Use relative units (e.g., %, em, rem) instead of fixed units (e.g., px) for scalable designs.
 
 
+********************aAnimation CSS*********************************
+animation-name,
+animation-duration,
+animation-timing-function,
+animation-delay,
+animation-iteration-count,
+animation-direction....
+
+******************Shorthand way of writing border****************
+div{
+animation: myfirst 5s linear 2s infinite alternate;
+
+
+********************CSS Pagination ********************
+
+}
+
+
+**************************Media Queries ******************************
+
+
 
