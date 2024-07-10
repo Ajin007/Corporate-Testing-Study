@@ -1,0 +1,110 @@
+*************CSS Media Queries ****************
+1. Mobile-First Design:
+
+Start with a base style for the smallest screens and build up for larger screens using min-width media queries.
+Example:
+css
+Copy code
+/* Base styles for mobile */
+body {
+  font-size: 16px;
+}
+
+/* Styles for tablets and larger screens */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* Styles for desktops and larger screens */
+@media (min-width: 1024px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+
+2. Use of Logical Combinations:
+
+Combine multiple media features to create more specific breakpoints.
+Example:
+css
+Copy code
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Styles for tablets */
+}
+
+@media (orientation: landscape) {
+  /* Styles for landscape mode */
+}
+
+**********************************CSS Specificity *******************************************
+CSS specificity and the !important declaration are essential concepts for understanding how styles are applied and prioritized in CSS. Here's an overview of both:
+
+CSS Specificity
+CSS specificity is a ranking system that determines which styles are applied to an element when multiple rules could apply. Specificity is calculated based on the types of selectors used in a rule.
+
+Specificity Hierarchy
+Inline Styles:
+
+Inline styles have the highest specificity.
+Example: <div style="color: red;">
+ID Selectors:
+
+ID selectors are very specific and have a higher specificity than class or type selectors.
+Example: #header
+Class, Attribute, and Pseudo-Class Selectors:
+
+These selectors have lower specificity than ID selectors but higher than type selectors.
+Example: .menu, [type="text"], :hover,active,link,visited,nth child
+
+Type Selectors and Pseudo-Element Selectors:
+
+These selectors have the lowest specificity.
+Example: div, p, ::before,after,
+
+Universal Selector, Combinators, and Negation Pseudo-Class:
+These have no specificity value.
+Example: *, +, >, ~, :not()
+Calculating Specificity
+
+
+Specificity is calculated by counting the number of selectors in each category. The specificity is usually represented as a four-part value (a, b, c, d):
+
+a: Inline styles (1 or 0)
+b: ID selectors
+c: Class, attribute, and pseudo-class selectors
+d: Type and pseudo-element selectors
+For example:
+
+#header → (0, 1, 0, 0)
+.menu .item → (0, 0, 2, 0)
+div p → (0, 0, 0, 2)
+Example of Specificity Calculation
+Given the following CSS rules:
+
+css
+Copy code
+div p { color: blue; }        /* (0, 0, 0, 2) */
+#header p { color: green; }   /* (0, 1, 0, 1) */
+div .item { color: red; }     /* (0, 0, 1, 1) */
+An element like <div id="header"><p class="item">Text</p></div> would have its text color set to green because #header p has the highest specificity (0, 1, 0, 1).
+
+!important Declaration
+The !important declaration overrides any other declarations, regardless of specificity.
+
+Usage
+css
+Copy code
+p {
+  color: blue !important;
+}
+
+#header p {
+  color: green;
+}
+
+
+*************************CSS Sprites ***********************
+used in optimization to split the images 
