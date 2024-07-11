@@ -176,3 +176,17 @@ const str = "one,two,three";
 const parts = str.split(/,/);
 console.log(parts); // ["one", "two", "three"]
             
+**********************************************how to use (for in) and (for of) in JS*****************************
+
+for(int arr in person){
+console.log(person[arr])  // ib for in loop of jS, it focus on the index value
+}
+
+second one ::::::
+
+for(int arr of person){
+console.log(arr);   //the var loop is going to store the actual values
+}
+
+person.push("soham");
+person.pop();
