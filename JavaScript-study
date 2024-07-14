@@ -190,3 +190,5 @@ console.log(arr);   //the var loop is going to store the actual values
 
 person.push("soham");
 person.pop();
+******************************************************String understanding*******************************
+
