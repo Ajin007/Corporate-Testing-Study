@@ -1,0 +1,129 @@
+********************************************Q1*********************************
+Custom Text Replacement Tool
+
+John is developing a custom text replacement web application. This application will allow users to enter text in a text area, specify a pattern to search for in an input field, 
+and provide a replacement value in another input field. A button will initiate the replacement process by calling a JavaScript function named replacePattern() .
+
+This function will retrieve the input text, pattern, and replacement value, check that 
+none of the fields are empty, and use regular expressions to replace occurrences of the pattern in the in
+put text. The modified text will then be displayed in a division and use level 1 for main heading.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Custom Text Replacement Tool</title>
+</head>
+<body>
+<h1>Custom Text Replacement Tool</h1>
+<div>
+<label for="inputText">Enter some text:</label><br />
+<textarea id="inputText" rows="4" cols="50"></textarea><br /><br />
+<label for="pattern">Enter the pattern to replace:</label><br />
+<input type="text" id="pattern" /><br /><br />
+<label for="replacementValue">Enter the value to replace with:</label
+><br />
+<input type="text" id="replacementValue" /><br /><br />
+<button onclick="replacePattern()">Replace Pattern</button>
+</div>
+<h2>Modified Text:</h2>
+<div id="modifiedText"></div>
+<script>
+     function replacePattern() {
+       const inputText = document.getElementById("inputText").value;
+       const pattern = document.getElementById("pattern").value;
+       const replacementValue =
+         document.getElementById("replacementValue").value;
+       const modifiedTextDiv = document.getElementById("modifiedText");
+       if (!inputText || !pattern || !replacementValue) {
+         modifiedTextDiv.textContent = "Please fill in all input fields.";
+         return;
+       }
+       const regex = new RegExp(pattern, "g");
+       const modifiedText = inputText.replace(regex, replacementValue);
+       modifiedTextDiv.textContent = modifiedText;
+     }
+</script>
+</body>
+</html>
+
+
+
+***************************************************Q3**********************
+Product Expiry Tracker
+
+Ram is tasked with creating a webpage that tracks the expiry date of a product based on its manufacturing date and shelf life in days. 
+The webpage should allow users to input a manufacturing date and shelf life,
+then display the expiry date and the status of the product (whether it is expired or valid).
+The application should include input fields for the manufacturing date and shelf life, 
+a button to trigger the calculation, and divs to display the expiry date, product status, and error messages.
+The calculateExpiryDate function will validate the inputs, calculate the expiry date, determine the product's status, and 
+display the results or error messages accordingly.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Expiry Tracker</title>
+</head>
+<body>
+    <h1>Product Expiry Tracker</h1>
+    <form id="expiryForm">
+        <label for="manufactureDate">Manufacturing Date:</label>
+        <input type="date" id="manufactureDate" required>
+        <br>
+        <label for="shelfLife">Shelf Life (in days):</label>
+        <input type="number" id="shelfLife" required>
+        <br>
+        <button type="button" id="calculateButton">Calculate Expiry Date</button>
+    </form>
+    <div id="result">
+        <div id="expiryDate"></div>
+        <div id="status"></div>
+        <div id="errorMessage"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+function calculateExpiryDate() {
+    const manufacturingDateInput = document.getElementById('manufactureDate').value;
+    const shelfLifeInput = document.getElementById('shelfLife').value;
+    const expiryDateDiv = document.getElementById('expiryDate');
+    const productStatusDiv = document.getElementById('status');
+    const errorMessageDiv = document.getElementById('errorMessage');
+    
+    // Clear previous messages
+    expiryDateDiv.textContent = '';
+    productStatusDiv.textContent = '';
+    errorMessageDiv.textContent = '';
+
+    // Validate inputs
+    if (!manufacturingDateInput || !shelfLifeInput) {
+        errorMessageDiv.textContent = 'Please enter a valid manufacturing date and shelf life.';
+        return;
+    }
+
+    const manufacturingDate = new Date(manufacturingDateInput);
+    const shelfLife = parseInt(shelfLifeInput);
+
+    if (isNaN(shelfLife) || shelfLife < 0) {
+        errorMessageDiv.textContent = 'Please enter a valid manufacturing date and shelf life.';
+        return;
+    }
+
+    // Calculate expiry date
+    const expiryDate = new Date(manufacturingDate);
+    expiryDate.setDate(expiryDate.getDate() + shelfLife);
+
+    const today = new Date();
+    const status = today > expiryDate ? 'Expired' : 'Valid';
+
+    // Display results
+    expiryDateDiv.textContent = `Expiry Date: ${expiryDate.toDateString()}`;
+    productStatusDiv.textContent = `Product Status: ${status}`;
+}
+
+document.getElementById('calculateButton').addEventListener('click', calculateExpiryDate);
+
+
