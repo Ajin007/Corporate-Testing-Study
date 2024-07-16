@@ -192,3 +192,98 @@ person.push("soham");
 person.pop();
 ******************************************************String understanding*******************************
 
+***************************************************************Array in Jav script******************************************
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div>
+
+<!-- This div is for understanding the animation -->
+    <!-- </div>
+
+    <div class="animationunderstanding"> -->
+        <button onclick="advanced()">clickeme for advanced function understanding</button>
+        <button onclick="filtermapreduce()">filtercheck</button>
+        <button onclick="callme()">Callme</button>
+        
+    </div>
+    <script src="./Advancedjs.js"></script>
+
+    
+</body>
+</html>
+
+
+:::::::js code:::::
+
+
+
+function advanced(){
+    const array=[1,2,3,4,5];
+    array.forEach((callbackvariable)=>{console.log(callbackvariable);
+
+    });
+}
+
+function filtermapreduce(){
+
+    const array=[1,2,3,4,5,6,7];
+    const result=array.map(mappedvalue=>mappedvalue*2).filter(filteredvalue=>filteredvalue%2==0).reduce((initial,next)=>
+        initial+next,0);
+    console.log(result);
+  
+
+
+}
+
+//object literals
+const objectcreation={
+    name:"ajin",
+    person: ()=>{return "This is my address"},
+    Address: {
+        street:"123",
+        native:"Bangalore",
+        location:"chennai"
+    },
+    Age:25,
+    person(){
+console.log("hi this also i shall do")
+    }
+
+}
+function callme(){
+
+    console.log(objectcreation.Address.location)
+    console.log(objectcreation.person)
+}
+
+//spread operator
+const array1=[1,2,3]
+const array2=[3,4,5];
+const join=array1.concat(array2);
+const spreadoperator=[...array1,4,5,6,7]
+console.log(join);
+console.log(spreadoperator);
+
+//spread operator exact usage
+const input1=100;
+const input2=[23,45,67,89]
+const input3="hello"
+function spreadchecker(input1,input2,input3){
+    //Spread operator 
+    const finalvalue=[...input1.toString(),...input2,...input3]
+    console.log(finalvalue);
+}
+
+spreadchecker(input1,input2,input3);
+
+
+************************************************************************Array Destructuring***************************************************
+
+
