@@ -127,3 +127,135 @@ function calculateExpiryDate() {
 document.getElementById('calculateButton').addEventListener('click', calculateExpiryDate);
 
 
+************************Character Count Tool ****************************
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+  <div class="container">
+
+    <form action="Form-creator">
+      <h1>Character Count Tool</h1>
+      <label for="textarea"><strong>Enter your text:</strong></label><br>
+      <textarea name="" id="textarea" cols="30" rows="10"></textarea><br>
+<label for="button">Count Characters</label><br>
+<button id="buton" type="button" onclick="countCharacters()">Count Charactersbutton</button>
+ </form>
+ 
+ <table>
+   <thead>
+     <tr>
+       <th>Character  Type</th>
+       <th>Count</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Letters</td>
+        <td id="letters"></td>
+      </tr>
+      <tr>
+        <td>Numbers</td>
+        <td id="numbercount"></td>
+      </tr>
+      <tr>
+        <td>Spaces</td>
+        <td id="numberspaces"></td>
+      </tr>
+      <tr>
+        <td>Special Characters</td>
+        <td id="specialcharacter"></td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- Write your code here -->
+</div>
+<script src="script.js">
+  
+</script>
+</body>
+</html>
+
+
+js::::::::::::::::::::::::
+
+function countCharacters(){
+    
+const textvalue=document.getElementById("textarea").value;
+
+    let letters=0;
+    let numbers=0;
+    let spaces=0;
+    let specialcharacters=0;
+
+    for(let count of textvalue){
+        if(count.match(/[a-zA-Z]/)){
+letters ++;
+        }
+
+        else if(count.match(/[0-9]/)){
+numbers ++;
+        }else if(count.match(/\s/)){
+spaces++;
+        }else{
+            specialcharacters++;
+        }
+    }
+
+    document.getElementById('letters').innerText=letters;
+    document.getElementById('numbercount').innerText=numbers;
+    document.getElementById('numberspaces').innerText=spaces;
+    document.getElementById('specialcharacter').innerText=specialcharacters;
+
+
+}
+
+css:::::::::::
+*{
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+}
+
+.container{
+    background-color: rgb(233, 233, 233);
+    max-width: fit-content;
+    max-height: fit-content;
+    border-radius: 10px;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.1) ;
+}
+
+textarea:hover {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 2px solid red; /* Added red border */
+    resize: vertical;
+  }
+  
+
+
