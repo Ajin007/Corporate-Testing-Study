@@ -256,6 +256,150 @@ textarea:hover {
     border: 2px solid red; /* Added red border */
     resize: vertical;
   }
-  
+
+
+***************************************************Photo-gallery****************************************************
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amita:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('assets/images/background.jpeg');
+            background-size: cover;
+            font-family: 'Amita', serif;
+            color: rgb(254, 250, 224);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: rgb(254, 250, 224);
+            font-size: 48px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        img {
+            width: 450px;
+            height: 300px;
+            border: 10px solid #FEFAE0;
+            filter: sepia(1);
+            transform: scale(0.9);
+            cursor: pointer;
+        }
+        img:hover{
+            border: 5px solid #fff;
+            transform: scale(1);
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .overlay-content {
+            position: relative;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .overlay-content img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            margin-top: 20px;
+            color: #FEFAE0;
+            background-color: #bc6c25;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 7px;
+            margin-left: 7px;
+            margin-right: 7px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #FEFAE0;
+            margin-left: 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Write your structure -->
+    <h1>Life in the Wild</h1>
+    <div class="container">
+        <img src="assets/images/horse.jpeg" alt="Horse" data-caption="A majestic horse running in the field.">
+        <img src="assets/images/elephant.jpeg" alt="Elephant" data-caption="An elephant bathing in the river.">
+        <img src="assets/images/fish.jpeg" alt="Fish" data-caption="A colorful fish swimming in the coral reef.">
+        <img src="assets/images/bird.jpeg" alt="Bird" data-caption="A bird perched on a tree branch.">
+        <img src="assets/images/lemur.jpeg" alt="Lemur" data-caption="A lemur hanging on a tree.">
+        <img src="assets/images/monkey.jpeg" alt="Monkey" data-caption="A monkey playing in the jungle.">
+    </div>
+    <div class="overlay" id="overlay">
+        <div class="overlay-content">
+            <p style="text-align: right; font-family: Arial, Helvetica, sans-serif; color:black; cursor: pointer;" onclick="document.getElementById('overlay').style.display='none'">X</p>
+            <img id="overlay-image" src="" alt="">
+            <p id="overlay-caption"></p>
+        </div>
+    </div>
+    <footer>
+        <a href="#">Privacy Policy</a>
+        Created with ❤️ by John Doe
+        <a href="#">Terms of Service</a>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('.container img');
+            const overlay = document.getElementById('overlay');
+            const overlayImage = document.getElementById('overlay-image');
+            const overlayCaption = document.getElementById('overlay-caption');
+
+            images.forEach(img => {
+                img.addEventListener('click', () => {
+                    overlayImage.src = img.src;
+                    overlayCaption.textContent = img.dataset.caption;
+                    overlayCaption.style.color = "black";
+                    overlay.style.display = 'flex';
+                });
+            });
+
+            overlay.addEventListener('click', (event) => {
+                if (event.target === overlay) {
+                    overlay.style.display = 'none';
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
+
 
 
